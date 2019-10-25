@@ -1,7 +1,7 @@
-import Base from 'formiojs/components/_classes/component/Component';
+import Component from 'formiojs/components/_classes/component/Component';
 import editForm from 'formiojs/components/table/Table.form';
 
-export default class CheckMatrix extends Base {
+export default class CheckMatrix extends Component {
 
   public static builderInfo = {
     title: 'Check Matrix',
@@ -15,7 +15,7 @@ export default class CheckMatrix extends Base {
   public static editForm = editForm;
 
   public static schema() {
-    return Base.schema({
+    return Component.schema({
       type: 'checkmatrix',
       numRows: 3,
       numCols: 3,
