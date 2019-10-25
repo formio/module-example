@@ -1,1 +1,5 @@
-export default {};
+import Test from './Test';
+
+export default {
+  Test,
+};

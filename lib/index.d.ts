@@ -9,7 +9,10 @@ declare const _default: {
         };
     };
     providers: {
-        storage: {};
+        auth: {};
+        storage: {
+            Test: typeof import("./providers/storage/Test").default;
+        };
     };
     templates: {
         bootstrap: {
