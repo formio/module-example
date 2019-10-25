@@ -1,7 +1,10 @@
 declare const _default: {
-    components: any;
-    fetch: any;
-    providers: any;
-    templates: any;
+    bootstrap: {
+        checkmatrix: {
+            form: string;
+        };
+    };
+    bootstrap3: {};
+    semantic: {};
 };
 export default _default;

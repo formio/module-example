@@ -15,6 +15,9 @@
     "lint",
     "test"
   ],
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/formio/module-example.git"

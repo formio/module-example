@@ -50,14 +50,11 @@ export default class CheckMatrix extends Base {
       }
     });
 
-    let content = '';
-
+    const inputs = [];
     for (let i = 0; i < this.component.numRows; i++) {
-      let row = '<tr>';
       for (let j = 0; j < this.component.numCols; j++) {
-        let cell = '<td>';
-
-        cell += this.renderTemplate('input', {
+        inputs[i] = inputs[i] || [];
+        inputs[i][j] = this.renderTemplate('input', {
           input: {
             type: 'input',
             ref: `${this.component.key}-${i}`,
@@ -68,22 +65,14 @@ export default class CheckMatrix extends Base {
             },
           },
         });
-
-        cell += '</td>';
-        row += cell;
       }
-      row += '</tr>';
-      content += row;
     }
 
-    // Calling super.render will wrap it html as a component.
-    return super.render(`
-<table class=${tableClass}>
-  <tbody>
-     ${content}
-  </tbody>
-</table>
-    `);
+    // Calling super.render will wrap its html as a component.
+    return super.render(this.renderTemplate('checkmatrix', {
+      inputs,
+      tableClass,
+    }));
   }
 
   /**

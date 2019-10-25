@@ -1,0 +1,13 @@
+<table class={{ctx.tableClass}}>
+  <tr>
+  {% for (let i = 0; i < ctx.component.numRows; i++) { %}
+    <td>
+    {% for (let j = 0; j < ctx.component.numCols; j++) { %}
+      <td>
+        {{ctx.inputs[i][j]}}
+      </td>
+    {% } %}
+    </tr>
+  {% } %}
+  </tbody>
+</table>
