@@ -54,6 +54,6 @@
   },
   "dependencies": {
     "formiojs": "^4.4.2",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   }
 }
