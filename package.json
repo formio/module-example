@@ -53,7 +53,7 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "formiojs": "^4.4.2",
+    "formiojs": "^4.14.11",
     "lodash": "^4.17.15"
   }
 }
